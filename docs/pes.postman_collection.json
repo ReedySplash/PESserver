@@ -1,0 +1,207 @@
+{
+  "info": {
+    "_postman_id": "a0ca8daf-5848-4195-bdee-3de9c98bcddc",
+    "name": "pes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"aleix\",\n\t\"surname\": \"a surname\",\n\t\"country\": \"Spain\",\n\t\"gender\": \"OTHER\",\n\t\"birthDate\": \"02/02/2015\",\n\t\"email\": \"aleix@fib.upc.edu\",\n\t\"password\": \"1234\",\n\t\"photo\": \"null\"\n}"
+        },
+        "url": {
+          "raw": "{{URL}}/user/register",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic Y2xpZW50OnBhc3N3b3Jk"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "password",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "aleix@fib.upc.edu",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "1234",
+              "description": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{URL}}/oauth/token",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "oauth",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "users",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": " {{API_KEY}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{URL}}/user",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "friendship status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{API_KEY}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{URL}}/friendship/aleix2@fib.upc.edu/status",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "friendship",
+            "aleix2@fib.upc.edu",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "friendships",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{API_KEY}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{URL}}/friendship",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "friendship"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "friendship settle",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{API_KEY}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{URL}}/friendship/aleix@fib.upc.edu/settle",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "friendship",
+            "aleix@fib.upc.edu",
+            "settle"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "friendship request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{API_KEY}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{URL}}/friendship/aleix3@fib.upc.edu/request",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "friendship",
+            "aleix3@fib.upc.edu",
+            "request"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
